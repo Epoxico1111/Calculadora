@@ -98,30 +98,3 @@ var comprobarInputP$ = function(){
   preciodolarA.setAttribute("placeholder", "Precio del Dolar");
 };
 preciodolarA.addEventListener("click", comprobarInputP$);
-
-
-
-
-
-// Comprobar Input del precio2
-// function comprobarInput2(){
-//   if(tudinero === 0){
-//     return false;
-// }
-// elementoInput.setAttribute("placeholder", "No tienes Bolivares");
-// elementoInput.className = "error";
-// };
-// elementoInput.addEventListener("click", comprobarInput);
-
-
-//----------------------Se parador de decimales---------------------------------
-// function format(n, sep, decimals) {
-//     sep = sep || "."; // Default to period as decimal separator
-//     decimals = decimals || 2; // Default to 2 decimals
-//
-//     return n.toLocaleString().split(sep)[0]
-//         + sep
-//         + n.toFixed(decimals).split(sep)[1];
-// }
-//
-// format(4567354.677623); // 4,567,354.68
