@@ -1,108 +1,56 @@
 * {
-  font-family: arial, helvetica, sans-serif;
-}
-/*    Top    */
-.dinero{
-  height: 100px;
-  background: gray;
-  display:inline-flex;
-  width: 100%;
-}
-/* Limpiando inputs */
-input{
-  border: 0;
-  outline: none;
-  margin-top: 10px;
-  padding: 0;
-}
-/* Inpus de texto */
-.input__texto{
-  width: 120px;
-}
-.restar__input{
-  width: 120;
-}
-
-.dinero__tus_bolivares{
-margin-top:-2px;
-margin-left: 13px;
-}
-.dinero__tus_dolares{
-margin-top:13px;
-margin-left: 13px;
-}
-.dinero__precio_dolar {
-margin-top:13px;
-margin-left: 13px;
-}
-.dinero__boton_confirmar{
-margin-top:13px;
-margin-left: 13px;
-}
-label{
-  margin-right:10px;
-}
-.bs{
-  font-size: 28px;
-  margin-left:14px;
-  margin-bottom: 50px;
-}
-.error {
-  border: 2px solid red;
-  border-radius: 4px;
-}
-.btnConfirmar{
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-
-
-
-/* * {
-  font-family: arial, helvetica, sans-serif;
-  	margin: 0;
-  	padding: 0;
-
-}
-input{
-  border: 0;
-  outline: none;
-}
-----------
-.dinero{
-  padding-top: 20px;
-  height: 52px;
-  font-weight: 700;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap:25px;
-  display: flex;
-  background: gray;
-  width:100%;
-}
--------------
-input {
-  padding: 6px;
-}
-.restar {
-  display: flex;
-}
-.error {
-  border: 2px solid red;
-  border-radius: 4px;
+  font-family: sans-serif;
 }
 ul {
-    display: flex;
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  display: flex;
 }
-.dinero__tus_bolivares .dinero__tus_dolares .dinero__precio_dolar {
-  padding: 50px;
+li {
+  list-style:none;
+  font-size: 28px;
+  padding: 5px;
 }
-.bs{
-  font-size: 30px;
-  z-index: 100;
+a {
+  text-decoration: none;
+  color: black;
+}
+.error {
+border: 2px solid red;
+border-radius: 4px;
+}
+input {
+border: 0;
+outline: none;
+border: 2px solid gray;
+border-radius: 4px;
+background: #FDFEFE;
+}
+.dineroD {
+  background: #7FB3D5;
+  display: block;
+  padding: 15px;
+}
+.dinero__tus_dolares {
+  margin-top: 5px;
+}
+.dinero__precio_dolar {
+  margin-top: 5px;
+}
+.boton__confirmar {
+  margin-top: 5px;
+}
+.dinero__tus_bolivares {
+  padding: 15px;
+}
+/* .input__texto {
+
+  display:flex;
 } */
+.bs {
+      font-size: 28px;
+      margin: 0px;
+      font-weight: bold;
+    }
+.teResta{
+  margin:0px;
+}
