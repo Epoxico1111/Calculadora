@@ -10,40 +10,50 @@
 </head>
 <body>
 
-  <div class="dinero">
+<header>
 
-    <div class="dinero__tus_bolivares">
-      <p>te resta Bs:</p>
-      <p id="dinero_tus_bolivares" class="bs"></p>
-    </div>
+<div class="dinero">
 
+<div class="dineroD">
   <div class="dinero__tus_dolares">
     <label for="tus_dolares">Tus Dolares: </label>
-        <input type="number" name="tus_dolares" id="tus_dolares" placeholder="Tus Dolares $">
+        <input class="input__texto" type="number" name="tus_dolares" id="tus_dolares" placeholder="¿Cuantos $ tienes?">
   </div>
 
   <div class="dinero__precio_dolar">
     <div>
       <label for="Precio Dolar">Precio del Dolar: </label>
-          <input type="number" name="Precio Dolar" id="precio_dolar" placeholder="Precio del Dolar">
+          <input class="input__texto" type="number" name="Precio Dolar" id="precio_dolar" placeholder="¿Cual es el precio del $?">
     </div>
   </div>
 
-    <div class="dinero__boton_confirmar">
-      <input type="button" value="Convertir" onclick="convertir()">
+  <div class="boton__confirmar">
+    <div class="boton__confirmarD">
+      <input type="button" class="btnConfirmar" value="Convertir" onclick="convertir()">
     </div>
-  </div>
-  <!--
--->
-<div class="restar">
-  <input type="number" id="elemento" class="restar__input" placeholder="Precio">
-
-  <input type="button" value="Restar" id="restarBtn" class="restar__btn" onclick="agregarElemento()">
 </div>
+</div>
+
+  <div class="dinero__tus_bolivares">
+    <p class="teResta">Te resta Bs: </p>
+    <p id="dinero_tus_bolivares" class="bs">0</p>
+  </div>
+
+</div>
+
+
+</header>
+  <div class="restar">
+    <input type="number" id="elemento" class="restar__input" placeholder="Precio">
+
+    <input type="button" value="Restar" id="restarBtn" class="restar__btn" onclick="agregarElemento()">
+
+    <input type="button" value="Restar todo" onclick="restarTodo()">
+  </div>
 
 <div class="lista wrap">
   <ul class="lista" id="lista">
-
+  
   </ul>
 </div>
 
