@@ -1,4 +1,4 @@
-  var x = "y";
+  // var x = "y";
   var tudinero = 0;
 // variables de bs y $
   var dolaresA = document.getElementById("tus_dolares"),
@@ -15,13 +15,12 @@ function convertir() {
       if (dolaresB === "" || dolaresB <= 0) {
             dolaresA.setAttribute("placeholder", "Agrega un valor valido");
             dolaresA.className = "error";
+          }
+      if (preciodolarB === "" || preciodolarB <= 0) {
+            preciodolarA.setAttribute("placeholder", "Agrega un valor valido");
+            preciodolarA.className = "error";
             return false;
           }
-          if (preciodolarB === "" || preciodolarB <= 0) {
-                preciodolarA.setAttribute("placeholder", "Agrega un valor valido");
-                preciodolarA.className = "error";
-                return false;
-              }
 
 // Hago la convecion
       tudinero = dolares * preciodolar;
@@ -45,11 +44,11 @@ function agregarElemento(){
       enlace = document.createElement("a"),
       contenido = document.createTextNode(elementoFloat);
 
-      if (tudinero === 0) {
-          elementoInput.setAttribute("placeholder", "No tiene Bolivares");
-          elementoInput.className = "error";
-          return false;
-      }
+      // if (tudinero === 0) {
+      //     elementoInput.setAttribute("placeholder", "No tiene Bolivares");
+      //     elementoInput.className = "error";
+      //     return false;
+      // }
       if (elemento === "" || elemento <= 0) {
           elementoInput.setAttribute("placeholder", "Agrega un valor valido");
           elementoInput.className = "error";
@@ -73,11 +72,15 @@ function agregarElemento(){
         descuento.innerHTML = "";
         descuento.appendChild(bsrestados);
 
-          if(tudinero < 0 && x === "y"){
-          alert("Ya no tiene Bolivares");
-          x = "z";
+        //   if(tudinero < 0 && x === "y"){
+        //   alert("Ya no tiene Bolivares");
+        //   x = "z";
+        // }
+        for (var i = 0; i <= lista.children.length -1; i++) {
+          lista.children[i].addEventListener("click", eleminarTarea);
         }
 }
+
 // Comprobar Input del precio
 var comprobarInput = function(){
   elementoInput.className = "";
@@ -98,3 +101,37 @@ var comprobarInputP$ = function(){
   preciodolarA.setAttribute("placeholder", "Precio del Dolar");
 };
 preciodolarA.addEventListener("click", comprobarInputP$);
+
+
+
+// Borrando Elementos de la lista
+
+var eleminarTarea = function(){
+  this.parentNode.removeChild(this);
+  var ff = parseFloat(this.textContent);
+      // ffFloat = parseFloat(ff);
+      tudinero = tudinero + ff;
+
+      var te_resta = document.getElementById("dinero_tus_bolivares"),
+          cantidad = document.createTextNode(tudinero);
+          te_resta.innerHTML = "";
+          te_resta.appendChild(cantidad);
+
+
+
+
+};
+// var lista = document.getElementById("lista");
+function restarTodo(){
+var todoLista = 0;
+for (var i = 0; i <=lista.children.length -1 ; i++) {
+  todoLista = todoLista + parseFloat(lista.children[i].textContent);
+
+}
+tuDineroMenosTodosLosElementosDeLaLista = tudinero - todoLista;
+
+      var te_resta = document.getElementById("dinero_tus_bolivares"),
+          cantidad = document.createTextNode(tuDineroMenosTodosLosElementosDeLaLista);
+          te_resta.innerHTML = "";
+          te_resta.appendChild(cantidad);
+}
